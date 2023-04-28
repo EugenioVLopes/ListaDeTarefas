@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--- Título --->
+  <title>To Do List de Eugênio</title>
+  <!--- Carrega o arquivo CSS --->
+  <link rel="stylesheet" href="style.css" />
+  <!--- Fonte da página --->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div style="text-align: center;">
+    <h1> Hábitos Diários</h1></br>
+    <table id="habitos-diarios" style="text-align: center; margin: auto">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Fazer a Cama</th>
+          <th>Caminhar</th>
+          <th>Remédios</th>
+          <th>Vitaminas</th>
+          <th>Academia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Segunda</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Terça</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Quarta</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Quinta</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Sexta</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Sábado</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Domingo</th>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!--- Cria uma divisão --->
+  <div id="ListaDeTarefas" ; style="text-align: center">
+    <h1> Lista de Tarefa</h1></br>
+  </div>
+  <!---Adicão da parte do que deve ser realizado pelo usuário--->
+  <div id="add" style="text-align: center;">
+    <input id="tarefa" type="text" placeholder="O que deve ser feito ..."></input>
+    <input id="data" type="date"></input>
+    <button onclick="novaTarefa()">Adicionar Tarefa</button>
+  </div>
+
+
+  <div id="resultados">
+    <body onload="exibirTarefas()">
+  </div>
+
+  <script src="script.js"> src = "https://kit.fontawesome.com/f9e19193d6.js"
+    crossorigin = "anonymous"</script>
+
+</body>
+
+</html>
