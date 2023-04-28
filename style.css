@@ -21,14 +21,20 @@ body {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
+#resultados-container {
+  width: 100%; /* Define a largura do contêiner pai */
+}
+
 #resultados {
   display: flex;
+  flex-direction: column; /* Define a orientação do elemento */
   justify-content: center;
   align-items: center;
-  flex: 3;
-  font-size: 1rem;
+  max-width: 500px;
+  margin: 0 auto; /* Centraliza o elemento horizontalmente */
   border: 2px solid #d1d3d4;
   border-radius: 5px;
   padding: 12px;
+  font-size: 1rem;
   font-weight: 500;
 }
