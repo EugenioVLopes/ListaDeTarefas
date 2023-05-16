@@ -21,15 +21,52 @@ body {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
+#ListaDeTarefas{
+  border: none;
+  font-size: 1rem;
+  outline: none
+}
+
+#tarefa{
+  border: none;
+  font-size: 1rem;
+  width: 13rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+#data{
+  border: none;
+  font-size: 1rem;
+  width: 12rem;
+  border-radius: 1rem;
+  padding: 1rem; 
+}
+
+#adicionarTarefa{
+  border: none;
+  width: 3rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#adicionarTarefa:hover{
+  background-color: #fff; 
+}
+
 #resultados-container {
   width: 100%; /* Define a largura do contêiner pai */
 }
 
 #resultados {
   display: flex;
+  align-items: center;
+  gap: 1rem;
   flex-direction: column; /* Define a orientação do elemento */
   justify-content: center;
-  align-items: center;
   max-width: 500px;
   margin: 0 auto; /* Centraliza o elemento horizontalmente */
   border: 2px solid #d1d3d4;
