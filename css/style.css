@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(65, 184, 131, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  gap: 10rem;
+  background-color: linear-gradient(
+    90deg,
+    rgba(65, 184, 131, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+button {
+  /* Espaçamento Interno */
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: white;
+
+  /* Posicionamento */
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 125%;
+  color: black;
+
+  transition: all 1s;
+}
+button:hover {
+  background-color: #b5e9f5;
+}
+
+/* Área de conteúdo principal */
+#form-habits {
+  display: flex;
+  width: fit-content;
+  padding: 0rem 3rem 3rem;
+}
+
+/* Div de Hábitos */
+.habits {
+  margin-top: 4.2rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+}
+
+/* Divs de icon de hábitos individual */
+.habit {
+  width: 3.2rem;
+  height: 3.2rem;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: scale 0.4s ease;
+}
+.habit:hover {
+  scale: 1.08;
+}
+
+/* Área de "calendário" */
+#form-habits .days {
+  display: flex;
+  gap: 3rem;
+  margin-left: 2rem;
+}
+
+/* Área de dias individualmente */
+.days .day {
+  display: flex;
+
+  gap: 1.5rem;
+  flex-direction: column;
+}
+
+/* Div que informa a data */
+.day div {
+  padding-bottom: 10px;
+  margin-bottom: 0.5rem;
+  font-family: "Roboto Mono";
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+/* Configurações de input de seleção / checkbox */
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  transition: background-color 0.4s ease;
+}
+
+/* Pseudo-Selector Vai dizer que: quando estiver selecionado, tenha estas propiedades*/
+input:checked {
+  background-color: #5cd7f6;
+  border: 2px solid #5cd7f6;
+}
+
+input:hover {
+  background-color: rgba(171, 146, 230, 0.3);
+}
+
+#ListaDeTarefas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  gap: 1rem;
+}
+
+#tarefa {
+  border: none;
+  font-size: 1rem;
+  width: 13rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+#data {
+  border: none;
+  font-size: 1rem;
+  width: 12rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+#adicionarTarefa {
+  border: none;
+  width: 3rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+#adicionarTarefa:hover {
+  background-color: #fff;
+}
+
+#resultados-container {
+  width: 100%; /* Define a largura do contêiner pai */
+}
+
+#resultados {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column; /* Define a orientação do elemento */
+  max-width: 500px;
+  margin: 0 auto; /* Centraliza o elemento horizontalmente */
+  border: 2px solid #d1d3d4;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+}
