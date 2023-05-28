@@ -16,7 +16,7 @@ function add() {
 
   // Se o dia já existir, não vai adiciona-lo mais
   if (dayExists === true) {
-    alert(`Dia incluso`)
+    alert(`Dia já foi incluso`)
   }
   // Se não existir, adicione-o
   else {
