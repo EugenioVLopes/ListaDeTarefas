@@ -2,4 +2,7 @@
     button div {
         display: none;
     }
+    ListaDeTarefas div {
+        display: none;
+    }
 }
