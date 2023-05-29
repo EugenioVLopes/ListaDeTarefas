@@ -120,8 +120,8 @@ input {
 
 /* Pseudo-Selector Vai dizer que: quando estiver selecionado, tenha estas propiedades*/
 input:checked {
-  background-color: #f47e34;
-  border: 2px solid #f47e34;
+  background-color: #f1a170;
+  border: 2px solid #f1a170;
 }
 
 input:hover {
