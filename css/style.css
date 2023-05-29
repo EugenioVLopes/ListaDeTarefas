@@ -125,7 +125,7 @@ input:checked {
 }
 
 input:hover {
-  background-color: rgba(171, 146, 230, 0.3);
+  background-color: rgba(190, 177, 225, 0.3);
 }
 
 #ListaDeTarefas {
@@ -183,5 +183,4 @@ input:hover {
   padding: 12px;
   font-size: 1rem;
   font-weight: 500;
-  padding-bottom: 1rem;
 }
