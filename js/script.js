@@ -1,16 +1,32 @@
+//Declarada uma variável NLWSetup e associando a ela uma classe.
 var NLWSetup = class NLWSetup {
+//Declara uma propriedade data dentro da classe e atribui a ela um objeto vazio.
   data = {}
+//Declara uma propriedade habits dentro da classe  e  atribuí um array vazio a ela.
   habits = []
+//Declarada uma propriedade days dentro da classe  e cria um novo objeto do tipo Set vazio.
+//A classe Set é uma coleção de valores únicos, ou seja, não permite duplicatas.  
   days = new Set()
+//Construtor recebe um parâmetro form.
   constructor(form) {
+//O parâmetro form é atribuído à propriedade form do objeto atual (this). 
+//O objeto criado a partir dessa classe terá uma propriedade form que armazena o valor passado ao construtor.
     this.form = form
+//A propriedade daysContainer é atribuída ao resultado de this.form.querySelector(".days").
+//O objeto criado terá uma propriedade daysContainer que referencia o elemento HTML com a classe "days" dentro do formulário (this.form).
     this.daysContainer = this.form.querySelector(".days")
+//Quando ocorrer um evento "change" no formulário, a função this.#update() será chamada.
     this.form.addEventListener("change", () => this.#update())
+//Chama a função createHabits().
     this.createHabits()
+//Carrega dados.
     this.load()
   }
   load() {
+//É criada uma variável hasData que verifica se a propriedade data do objeto atual (this) contém alguma chave.
+//Object.keys(this.data) retorna um array contendo as chaves presentes em this.data, e length > 0 verifica se esse array tem um tamanho maior que zero.
     const hasData = Object.keys(this.data).length > 0
+//Se a variável hasData for falsa (ou seja, se this.data estiver vazio), o método retorna, interrompendo a execução do restante do código.
     if (!hasData) return
 
     this.#registerDays()
@@ -18,16 +34,29 @@ var NLWSetup = class NLWSetup {
   }
 
   #registerDays() {
+//Chama Object.keys(this.data) para obter um array com as chaves presentes na propriedade data do objeto atual (this). 
+//Em seguida, é utilizado o método forEach() para iterar(passar por cada elemento ou item de uma sequência de dados) sobre cada chave.
     Object.keys(this.data).forEach((key) => {
+//Utiliza this.data[key] para obter um array de datas correspondente a essa chave. 
+//Em seguida, é utilizado o método forEach() para iterar sobre cada data.
       this.data[key].forEach((date) => {
+//Para cada data, é chamado o método add() da propriedade days (que é um objeto do tipo Set).
+//Isso adiciona a data ao conjunto days, garantindo que apenas datas únicas sejam armazenadas.
         this.days.add(date)
       })
     })
   }
   renderLayout() {
+//O contéudo HTML this.daysContainer é definido como uma string vazia. 
+//Isso é feito para limpar qualquer conteúdo anterior.
     this.daysContainer.innerHTML = ""
+// É iniciado um loop for...of usando o método #getSortedDays(). 
     for (let date of this.#getSortedDays()) {
+//A data é dividida em dois valores, mês e dia, usando o método split("-") e a atribuição via desestruturação.
+//A data está no formato "AAAA-MM-DD", então essa linha separa o mês e o dia.
       const [month, day] = date.split("-")
+//Chama #createDayElement() passando uma string concatenada com o dia e o mês formatados.
+//Esse método é responsável por criar um elemento HTML correspondente ao dia e adicioná-lo ao layout.
       this.#createDayElement(day + "/" + month)
     }
   }
