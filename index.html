@@ -1,57 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <!-- Fontes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
-
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-
-    <title>Lista de Tarefas de Eugênio</title>
+    <title>Lista de Tarefas - Login</title>
+    <link rel="stylesheet" href="css/login.css" />
   </head>
   <body>
-    <header>
-      <h1>Hábitos Díarios</h1>
-      <button>
-        <img src="assets/plus.svg" alt="Ícone sinal de mais roxo" />
-        <div>
-          Registrar o meu dia
+    <div class="main-login">
+      <div class="left-login">
+        <h1>Lista de Tarefas</h1>
+        <img src="./assets/checklist-animate.svg" class="left-login-image" alt="logoanimado" />
+      </div>
+      <div class="right-login">
+        <div class="card-login">
+          <h1>LOGIN</h1>
+          <div class="textfield">
+            <label>Usuário</label>
+            <input type="text" id="usuario" placeholder="Digite o usuário" />
+          </div>
+          <div class="textfield">
+            <label>Senha</label>
+            <input type="password" id="senha" placeholder="Digite a senha" />
+          </div>
+          <button class="btn-login" id="btn-login">Login</button>
         </div>
-      </button>
-    </header>
-
-    <form id="form-habits">
-      <div class="habits">
-        <div class="habit" data-name="run">🏃‍♂️</div>
-        <div class="habit" data-name="water">💧</div>
-        <div class="habit" data-name="food">🦾</div>
-        <div class="habit" data-name="sleep">💤</div>
-        <div class="habit" data-name="codding">💻</div>
-        <div class="habit" data-name="networking">🎧</div>
       </div>
-
-      <div class="days"></div>
-    </form> 
-
-  <!--- Cria uma divisão no HTML chamada ListaDeTaredas --->
-        <div id="ListaDeTarefas"; >
-        <br>
-        <h1 style="text-align: center"> Lista de Tarefa</h1></br>
-        <!---Adicão da parte do que deve ser realizado pelo usuário--->
-        <input id="tarefa" type="text" placeholder="O que deve ser feito ..."></input>
-        <input id="data" type="date"></input>
-        <button id="adicionarTarefa" title="Click aqui para adicionar uma nova Tarefa" onclick="novaTarefa()"> <img
-            src="assets/logoadd.svg" alt="Logo de adicionar" /></button>
-      </div>
-      <br>
-      <div id="resultados">
-        <body onload="exibirTarefas()">
-      </div>
-    <script src="js/script.js"></script>
+    </div>
+    <script src="./js/validar.js"></script>
   </body>
 </html>

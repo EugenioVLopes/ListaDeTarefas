@@ -27,7 +27,7 @@ botao.addEventListener("click", function logar() {
     }
   }
   if (validaLogin == true) {
-    location.href="index.html";
+    location.href="listadetarefas.html";
   } else {
     alert("Usuário ou senha inválido");
   }
