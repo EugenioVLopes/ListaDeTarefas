@@ -37,7 +37,7 @@ body * {
 }
 
 .left-login-image {
-    width: 35vw;
+    width: 40vw;
 }
 
 .right-login{
@@ -118,6 +118,9 @@ body * {
     .card-login{
         width: 85%;
     }
+    .left-login-image{
+        width: 50vw;
+    }
 }
 
 @media only screen and (max-width: 600px){
@@ -137,5 +140,9 @@ body * {
     }
     .card-login{
         width: 90%;
+    }
+    .left-login-image{
+        width: 50vw;
+        height: 400%;
     }
 }
