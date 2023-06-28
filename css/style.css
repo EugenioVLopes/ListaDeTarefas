@@ -197,6 +197,7 @@ input:hover {
 @media (max-width: 570px) {
   header {
     flex-direction: column;
+    gap: 0;
   }
   #form-habits {
     flex-direction: column;
@@ -209,6 +210,7 @@ input:hover {
 @media only screen and (max-width: 950px) {
   header {
     flex-direction: column;
+    gap: 0;
   }
   #form-habits {
     flex-direction: column;
@@ -221,6 +223,7 @@ input:hover {
 @media only screen and (max-width: 600px) {
   header {
     flex-direction: column;
+    gap: 0;
   }
   #form-habits {
     flex-direction: column;
